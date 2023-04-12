@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("zenside.lua", "DarkTheme")
+local Window = Library.CreateLib("trexity.lua", "DarkTheme")
 
 local UniversalTab = Window:NewTab("Universal")
 local UniversalSection = UniversalTab:NewSection("Universal")
