@@ -1,13 +1,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("zenside.lua", "DarkTheme")
 
+--universal scripts
+
 local UniversalTab = Window:NewTab("Universal")
 local UniversalSection = UniversalTab:NewSection("Universal")
-local LocalPlayerTab = Window:NewTab("LocalPlayer")
-local LocalPLRSection = LocalPlayerTab:NewSection("LocalPlayer")
-
-
---universal scripts
 
 UniversalSection:NewButton("Infinite Yield", "most basic script ever", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
@@ -57,6 +54,10 @@ end)
 UniversalSection:NewLabel("more scripts soon")
 
 ---LocalPlayer
+
+local LocalPlayerTab = Window:NewTab("LocalPlayer")
+local LocalPLRSection = LocalPlayerTab:NewSection("LocalPlayer")
+
 LocalPLRSection:NewSlider("WalkSpeed", "brrrrrrrrrrr", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
