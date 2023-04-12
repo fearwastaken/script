@@ -1,177 +1,222 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("zenside.lua", "DarkTheme")
+print("made by happy boy")
 
---universal scripts
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Trexity FE"})
 
-local UniversalTab = Window:NewTab("Universal")
-local UniversalSection = UniversalTab:NewSection("Universal")
+--universal
 
-UniversalSection:NewButton("Infinite Yield", "most basic script ever", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
+local UniTab = Window:MakeTab({
+	Name = "Universal"})
+local UniSection = UniTab:AddSection({
+	Name = "Universal"
+})
 
-UniversalSection:NewButton("Block Pistol", "Must have the Red-Roblox-Cap and Pal-Hair", function()
-	loadstring(game:HttpGet(("https://pastebin.com/raw/Bju4We3f"), true))()
-end)
+UniTab:AddButton({
+	Name = "InfYld",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
 
-UniversalSection:NewButton("Laser Arm", "Must have Pal-Hair and Wear any 9 other hats/hair", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts-2/main/FE%20Laser%20Arm.Lua'))()
-end)
+UniTab:AddButton({
+	Name = "Dex",
+	Callback = function()
+      		loadstring(game:HttpGet('https://gist.githubusercontent.com/DinosaurXxX/b757fe011e7e600c0873f967fe427dc2/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4'))()
+  	end    
+})
 
-UniversalSection:NewButton("HammerFling", "must have the Oversized Hammer of the Titans and the Red Roblox Cap", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/fearwastaken/lynx.lua/main/hammer.lua'))()
-end)
+UniTab:AddButton({
+	Name = "BlockPistol (READ DISCORD)",
+	Callback = function()
+		loadstring(game:HttpGet(("https://pastebin.com/raw/Bju4We3f"), true))()
+  	end    
+})
 
-UniversalSection:NewButton("Parkour", "makes u do flips and stuff", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/fearwastaken/script/main/parkour.lua'))()
-end)
+UniTab:AddButton({
+	Name = "SCP 096 (READ DISCORD)",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/SjYncFbZ", true))()
+  	end    
+})
 
-UniversalSection:NewButton("Chainsaw Man", "must have the shredder chainsaw and shredder chainsaw back", function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/memeboiyoot/Random-stuff/main/chainsaw')))()
-end)
-
-UniversalSection:NewButton("Headless", "if ur a slender u gotta be using this :skull: ", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/jLn0n/scripts/main/misc/fe-headless.lua"))()
-end)
-
-UniversalSection:NewButton("Btools", "self explainatory", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/fearwastaken/lynx.lua/main/btools.lua'))()
-end)
-
-UniversalSection:NewButton("Dex", "yes", function()
-	loadstring(game:HttpGet('https://gist.githubusercontent.com/DinosaurXxX/b757fe011e7e600c0873f967fe427dc2/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4'))()
-end)
-
-UniversalSection:NewButton("Saitama", "must have the Fan Hand Sign - Why Don't We (WDW) controls R to Main Idle E to Barrage Click to Punch", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/fearwastaken/lynx.lua/main/saitama.lua"))()
-end)
-
-UniversalSection:NewButton("SCP", "u need the international fedora peru and international fedora usa and international fedora brazil and international fedora philililililipines and the brown hair", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/fearwastaken/lynx.lua/main/scp069.lua'))()
-end)
+UniTab:AddButton({
+	Name = "Btools"
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/fearwastaken/lynx.lua/main/btools.lua'))()
+  	end    
+})
 
 
-UniversalSection:NewLabel("more scripts soon")
+UniTab:AddButton({
+	Name = "Headless"
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/jLn0n/scripts/main/misc/fe-headless.lua"))()
+  	end    
+})
 
----LocalPlayer
 
-local LocalPlayerTab = Window:NewTab("LocalPlayer")
-local LocalPLRSection = LocalPlayerTab:NewSection("LocalPlayer")
+UniTab:AddButton({
+	Name = "Parkour"
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/fearwastaken/script/main/parkour.lua'))()
+  	end    
+})
 
-LocalPLRSection:NewSlider("WalkSpeed", "brrrrrrrrrrr", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
 
-LocalPLRSection:NewSlider("Jumppower", "brrrrrrrrr", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
+UniTab:AddButton({
+	Name = ""
+	Callback = function()
+		print("hi")
+  	end    
+})
 
-LocalPLRSection:NewButton("Fly", "vroooooooom", function()
-	loadstring(game:HttpGet(('https://pastebin.com/raw/RkUtdYb0'), true))()
-end)
-
-end
+UniTab:AddLabel("More scripts soon")
 
 if game.PlaceId == 155615604 then
-local PrisonLifeTab = Window:NewTab("PrisonLife")
-local PrisonLifeSection = PrisonLifeTab:NewSection("PrisonLife")
+	local PLTab = Window:MakeTab({
+		Name = "PrisonLife"})
+		local PLSection = PLTab:AddSection({
+			Name = "PrisonLife"
+		})
+		PLTab:AddLabel("Trolls")
 
+		PLTab:AddButton({
+			Name = "VehicleFly",
+			Callback = function()
+				loadstring(game:HttpGet(('https://pastebin.com/raw/VLBwAgwT'),true))()
+			  end    
+		})
 
-PrisonLifeSection:NewLabel("Trolls")
+		PLTab:AddLabel("TPS")
 
-PrisonLifeSection:NewButton("VehicleFly", "vrooooooooom", function()
-	loadstring(game:HttpGet(('https://pastebin.com/raw/VLBwAgwT'),true))()
-end)
+		PLTab:AddButton({
+			Name = "OutOfPrison",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(451.6684265136719, 98.0399169921875, 2216.338134765625)
 
-PrisonLifeSection:NewLabel("TPS")
+			  end    
+		})
 
-PrisonLifeSection:NewButton("Outside of prison", "Teleports You outside of the prison!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(451.6684265136719, 98.0399169921875, 2216.338134765625)
-            end)
+		PLTab:AddButton({
+			Name = "Prison Yard",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(736.4671630859375, 97.99992370605469, 2517.583740234375)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("Prison Yard", "Teleports You to the Prison Yard", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(736.4671630859375, 97.99992370605469, 2517.583740234375)
-            end)
+		PLTab:AddButton({
+			Name = "Kitchen",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(906.641845703125, 99.98993682861328, 2237.67333984375)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("Kitchen", "Teleports You to the Kitchen!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(906.641845703125, 99.98993682861328, 2237.67333984375)
-end)
+		PLTab:AddButton({
+			Name = "Cells",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(919.5551147460938, 99.98998260498047, 2441.700927734375)
+			  end    
+		})
 
- PrisonLifeSection:NewButton("Prison Cells", "Teleports You to the Prison Cells!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(919.5551147460938, 99.98998260498047, 2441.700927734375)
-            end)
+		PLTab:AddButton({
+			Name = "Surveilance Room",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(795.251953125, 99.98998260498047, 2327.720703125)
+			  end    
+		})
+		
+		PLTab:AddButton({
+			Name = "Police Room",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(836.5386352539062, 99.98998260498047, 2320.604248046875)
+			  end    
+		})	
+			PLTab:AddButton({
+			Name = "Cafeteria",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(918.994873046875, 99.98993682861328, 2325.73095703125)
+			  end    
+		})	
+			PLTab:AddButton({
+			Name = "CriminalBase",
+			Callback = function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-975.8451538085938, 109.32379150390625, 2053.11376953125)
+			  end    
+		})
 
- PrisonLifeSection:NewButton("Surveilance Room", "Teleports You to the Surveilance Room!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(795.251953125, 99.98998260498047, 2327.720703125)
-            end)
+		PLSection:AddLabel("Combat")
 
- PrisonLifeSection:NewButton("Break Room", "Teleports You to the Break Room!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(800.0896606445312, 99.98998260498047, 2266.71630859375)
-            end)
-
-PrisonLifeSection:NewButton("Police Armory", "Teleports You to the Police Armory!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(837.2889404296875, 99.98998260498047, 2270.99658203125)
-            end)
-
-PrisonLifeSection:NewButton("Police Room", "Teleports to to the Police Room", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(836.5386352539062, 99.98998260498047, 2320.604248046875)
-            end)
-
-PrisonLifeSection:NewButton("Cafeteria", "Teleports you to the Cafeteria!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(918.994873046875, 99.98993682861328, 2325.73095703125)
-			end)
-
- PrisonLifeSection:NewButton("Criminal Base Inside", "Teleports you to the Criminal Base Inside!", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-975.8451538085938, 109.32379150390625, 2053.11376953125)
-    end)
-
-PrisonLifeSection:NewLabel("Combat")
-
-PrisonLifeSection:NewButton("Give all weapons", "America!!", function()
-                print("All Weapons Given!")
+		PLTab:AddButton({
+			Name = "Give All Weapons",
+			Callback = function()
+				print("All Weapons Given!")
                 workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
                 workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver.M9.ITEMPICKUP)
                 workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.single.Hammer.ITEMPICKUP)
                 workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
         print(currentOption)
-    end)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("Remington 870", "yes", function()
-	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
-end)
+		PLTab:AddButton({
+			Name = "AK-47",
+			Callback = function()
+				workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("M9", "hi", function()
-	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver.M9.ITEMPICKUP)
-end)
+		PLTab:AddButton({
+			Name = "Hammer",
+			Callback = function()
+				workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.single.Hammer.ITEMPICKUP)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("AK-47", "gahagahgahagahag", function()
-	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
-end)
+		PLTab:AddButton({
+			Name = "M9",
+			Callback = function()
+				workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver.M9.ITEMPICKUP)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("Hammer", "bonk", function()
-	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.single.Hammer.ITEMPICKUP)
-end)
+		PLTab:AddButton({
+			Name = "REMINGTON 870",
+			Callback = function()
+				workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
+			  end    
+		})	
 
-PrisonLifeSection:NewLabel("Misc")
+		PLTab:AddLabel("Misc")
 
-PrisonLifeSection:NewButton("Remove all Doors", "Removes Every Door!", function()
-                for i,d in pairs(game.Workspace.Doors:GetChildren()) do
+		PLTab:AddButton({
+			Name = "Remove all doors",
+			Callback = function()
+				for i,d in pairs(game.Workspace.Doors:GetChildren()) do
                     if d.ClassName == "Model" then
                         d:Destroy()
                     end
                 end
-            end)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("Remove All Fences", "All Fences Will Be Removed!", function()
-                for i,l in pairs(game.Workspace["Prison_Fences"]:GetChildren()) do
+		PLTab:AddButton({
+			Name = "Remove all fences",
+			Callback = function()
+				for i,l in pairs(game.Workspace["Prison_Fences"]:GetChildren()) do
                     if l.Name == "fence" then
                         l:Destroy()
                     end
                 end
-            end)
+			  end    
+		})
 
-PrisonLifeSection:NewButton("Remove All Gates", "All Fences Will Be Removed!", function()
-                game.Workspace["Prison_Fences"]["Prison_Gate"]:Destroy()
+		PLTab:AddButton({
+			Name = "Remove all gates",
+			Callback = function()
+				game.Workspace["Prison_Fences"]["Prison_Gate"]:Destroy()
                 game.Workspace["Prison_Fences"]["gate"]:Destroy()
-            end)
+			  end    
+		})
+	elseif game.PlaceId ==
+	end
 end
