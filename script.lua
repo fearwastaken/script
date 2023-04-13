@@ -217,6 +217,5 @@ if game.PlaceId == 155615604 then
                 game.Workspace["Prison_Fences"]["gate"]:Destroy()
 			  end    
 		})
-	elseif game.PlaceId ==
 	end
 end
